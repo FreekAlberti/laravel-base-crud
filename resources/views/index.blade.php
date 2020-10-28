@@ -11,6 +11,7 @@
             <div>{{$book->title}}</div>
             <div>{{$book->author}}</div>
             <div>{{$book->edition}}</div>
+            <div>{{$book->pages}}</div>
             <div>{{$book->genre}}</div>
             <img style="height: 100px; width: 100px;" src="{{$book->image}}" alt="">
             <div>{{$book->year}}</div>

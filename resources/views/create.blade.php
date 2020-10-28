@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form mrthod="POST" action="">
+<form method="POST" action="{{route("books.store")}}">
         @csrf
         @method("POST")
         <div>
-            <label for="name">Titolo</label>
-            <input type="text" name="title" id="name" placeholder="Titolo">
+            <label for="title">Titolo</label>
+            <input type="text" name="title" id="title" placeholder="Titolo">
         </div>
 
         <div>
@@ -23,6 +23,11 @@
         <div>
             <label for="edition">Edizione</label>
             <input type="text" name="edition" id="edition" placeholder="Edizione">
+        </div>
+
+        <div>
+            <label for="pages">Pagine</label>
+            <input type="text" name="pages" id="pages" placeholder="Pagine">
         </div>
 
         <div>
