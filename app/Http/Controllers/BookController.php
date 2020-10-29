@@ -36,6 +36,17 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
+        // $request->validate([
+        //     "title" => "required|max:30",
+        //     "author" => "required|max:50",
+        //     "pages" => "required|integer",
+        //     "edition" => "required|max:50",
+        //     "year" => "required|date",
+        //     "isbn" => "required|unique:books|max:13",
+        //     "genre" => "required|max:30",
+        //     "image" => "required",
+        // ]);
+
         $data = $request->all();
         $book = new Book;
         $book->title = $data["title"];
@@ -47,6 +58,8 @@ class BookController extends Controller
         $book->genre = $data["genre"];
         $book->image = $data["image"];
         $book->save();
+
+        // return redirect()->ruote("books.show", $book);
     }
 
     /**
@@ -57,7 +70,8 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        //
+        // $book = Book::find($id);
+        // return view("show", ["book" => $book]);
     }
 
     /**
